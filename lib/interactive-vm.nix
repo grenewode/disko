@@ -73,7 +73,7 @@ let
   }).config.system.build.vm;
 in
 {
-  pure = pkgs.writeDashBin "disko-vm" ''
+  pure = pkgs.writeScriptBin "disko-vm" ''
     set -efux
     export tmp=$(mktemp -d)
     trap 'rm -rf "$tmp"' EXIT
